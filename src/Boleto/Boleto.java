@@ -1,4 +1,4 @@
-package boleto;
+package Boleto;
 
 import java.util.Date;
 

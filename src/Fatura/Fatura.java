@@ -1,9 +1,6 @@
-package fatura;
+package Fatura;
 
-import java.util.ArrayList;
 import java.util.Date;
-
-import boleto.Boleto;
 
 public class Fatura {
 	 
