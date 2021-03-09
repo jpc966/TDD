@@ -20,7 +20,7 @@ public class ProcessadorBoletoTest {
 	
 	@BeforeEach
 	public void inicializaFatura() {
-		fatura = new Fatura("Jean", 60000.00, 1, new Date());
+		fatura = new Fatura("Jean", 60000.00, 1, false, new Date());
 		Boleto boleto1 = new Boleto(1, "142536", 20000.0);
 		
 		boletos.add(boleto1);
@@ -32,13 +32,13 @@ public class ProcessadorBoletoTest {
 	public void testFaturaPagaError() {
 		processadorBoleto.pagar(boletos, fatura);
 		
-		assertFalse(fatura.foiPaga());
+		assertFalse(fatura.foiPago());
 	}
 
 	@Test
 	public void testFaturaPagaSucesso() {
-		Boleto boleto2 = new Boleto(1, "1267", 10000.0);
-		Boleto boleto3 = new Boleto(1, "5802", 10000.0);
+		Boleto boleto2 = new Boleto(1, "1267", 20000.0);
+		Boleto boleto3 = new Boleto(1, "5802", 20000.0);
 		
 		boletos.add(boleto2);
 		boletos.add(boleto3);

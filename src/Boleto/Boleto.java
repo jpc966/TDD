@@ -14,4 +14,9 @@ public class Boleto {
 		 this.codBoleto = codBoleto;
 		 this.data = new Date();
 	 }
+	 
+	 public double getValorPago() {
+		 return this.valorPago;
+	 }
+	 
 }
